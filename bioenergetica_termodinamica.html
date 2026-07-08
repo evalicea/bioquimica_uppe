@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad III: Principios de Bioenergética y Termodinámica</title>
+    
+    <style>
+        /* =========================================
+           1. REGLAS GLOBALES (IDENTIDAD UPP)
+           ========================================= */
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #303A37; background-color: #f4f4f4; margin: 0; padding: 20px; }
+        
+        .container { 
+            width: 95%; max-width: 1100px; margin: auto; background: #fff; padding: 40px; 
+            box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; 
+        }
+
+        p { margin-bottom: 18px; text-align: justify; }
+        
+        .highlight { color: #007685; font-weight: bold; } /* Azul secundario UPP */
+
+        /* =========================================
+           2. TIPOGRAFÍAS Y TÍTULOS (AZUL UPP #192A47)
+           ========================================= */
+        h1, h2, h3 { color: #192A47; text-transform: uppercase; }
+        h1 { font-size: 26px; border-left: 12px solid #192A47; padding-left: 15px; margin-bottom: 30px; }
+        h2 { font-size: 22px; margin-top: 40px; border-bottom: 2px solid #C9C6C5; padding-bottom: 5px; }
+        h3 { font-size: 19px; margin-top: 30px; color: #007685; }
+
+        /* =========================================
+           3. ÍNDICE DE CONTENIDOS
+           ========================================= */
+        .contenedor-indice { 
+            background-color: #EBDBD5; border-left: 6px solid #192A47; padding: 25px; 
+            margin: 30px 0; border-radius: 4px; 
+        }
+        .titulo-indice { color: #192A47; font-size: 20px; margin-top: 0; }
+        .lista-indice { list-style-type: none; padding-left: 0; }
+        .lista-indice li { margin-bottom: 10px; }
+        .enlace-indice { color: #192A47; text-decoration: none; font-weight: bold; }
+        .enlace-indice:hover { color: #007685; text-decoration: underline; }
+
+        /* =========================================
+           4. BLOQUES DE INFORMACIÓN
+           ========================================= */
+        .info-box { 
+            background-color: #f8fafc; border: 1px solid #192A47; 
+            padding: 20px; border-radius: 8px; margin: 20px 0; 
+        }
+        
+        .reference-section { margin-top: 50px; padding-top: 20px; border-top: 2px solid #192A47; font-size: 14px; }
+        
+        footer { 
+            margin-top: 60px; text-align: right; font-size: 13px; color: #545b62; 
+            border-top: 1px solid #C9C6C5; padding-top: 20px; 
+        }
+
+        img {
+            max-width: 100% !important; /* Impide que la imagen sea más ancha que su contenedor */
+            height: auto !important;    /* Mantiene la proporción original para que no se deforme */
+            display: block;
+            margin: 0 auto;             /* Centra la imagen automáticamente */
+        }
+
+        .video-responsivo-container {
+        position: relative;
+        padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+        margin: 20px auto;
+        border: 3px solid #192A47; /* Azul Institucional UPP */
+        border-radius: 8px;
+        }
+        .video-responsivo-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        }
+        .pie-video {
+        font-size: 13px;
+        color: #444;
+        text-align: center;
+        margin-top: -10px;
+        margin-bottom: 25px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <!-- Simulación de encabezado institucional -->
+            <h4 style="color: #192A47; margin: 0;">UNIVERSIDAD POLITÉCNICA DE PÉNJAMO</h4>
+            <small style="color: #007685;">INGENIERÍA EN BIOTECNOLOGÍA</small>
+        </div>
+        <h1>Unidad III: Metabolismo y Bioenergética</h1>
+        <h2>Tema 1: Principios de Bioenergética y Termodinámica</h2>
+    </header>
+
+    <nav class="contenedor-indice">
+        <h3 class="titulo-indice">📌 Índice</h3>
+        <ul class="lista-indice">
+            <li><a href="#objetivo" class="enlace-indice">1. Objetivo de Aprendizaje</a></li>
+            <li><a href="#termodinamica" class="enlace-indice">2. Leyes de la Termodinámica en Sistemas Biológicos</a></li>
+            <li><a href="#redox" class="enlace-indice">3. Reacciones Redox Biológicas</a></li>
+            <li><a href="#energia" class="enlace-indice">4. Compuestos de Alta Energía (ATP y GTP)</a></li>
+            <li><a href="#gibbs" class="enlace-indice">5. Energía Libre de Gibbs y Clasificación de Reacciones</a></li>
+            <li><a href="#referencias" class="enlace-indice">6. Referencias Bibliográficas</a></li>
+        </ul>
+    </nav>
+
+    <!-- SECCIÓN 1: OBJETIVO -->
+    <section id="objetivo">
+        <h2>1. Objetivo de Aprendizaje</h2>
+        <p>El estudiante determinará las características y componentes de las rutas metabólicas y su <span class="highlight">conservación energética</span>, mediante el análisis de las leyes termodinámicas y compuestos de alta energía, para su fundamentación en bioprocesos.</p>
+    </section>
+
+    <!-- SECCIÓN 2: TERMODINÁMICA -->
+    <section id="termodinamica">
+        <h2>2. Leyes de la Termodinámica en Sistemas Biológicos</h2>
+        <p>La termodinámica estudia los cambios de energía que acompañan a los procesos biológicos. En bioquímica, las células se consideran <span class="highlight">sistemas abiertos</span> que intercambian materia y energía con su entorno para mantener un estado alejado del equilibrio.</p>
+        
+        <div class="contenedor-imagen-moodle" style="text-align: center; margin: 20px auto;">
+         <figure class="contenedor-imagen" style="display: inline-block; max-width: 650px; width: 100%; margin: 0 auto;">
+                <img src="https://github.com/evalicea/bioquimica_uppe/blob/main/imagen_2.png?raw=true" 
+                    alt="La célula es un sistema abierto" 
+                    style="max-width: 100%; width: 650px; height: auto; display: block; margin: 0 auto;">
+        
+                <figcaption class="pie-imagen" style="text-align: center; margin-top: 10px; font-size: 14px; color: #444; line-height: 1.4;">
+                    <strong>Figura 1.</strong> La célula es un sistema abierto.
+                    <span class="fuente-imagen" style="display: block; font-size: 12px; color: #777; margin-top: 4px;">
+                        Fuente: Figure labs <a href="https://chat.figurelabs.ai/" target="_blank" style="color: #006D51; text-decoration: underline;"><i>https://chat.figurelabs.ai/</i></a>
+                    </span>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="info-box">
+
+           <h3>Principios Fundamentales:</h3>
+            <ul>
+                <li><strong>Primera Ley (Conservación):</strong> La energía no se crea ni se destruye, solo se transforma (por ejemplo: de energía química a mecánica en los músculos).</li>
+                <li><strong>Segunda Ley (Entropía):</strong> El desorden total del universo siempre aumenta en un proceso espontáneo. Las células mantienen su orden interno liberando calor hacia el ambiente.</li>
+            </ul>
+        </div>
+
+        <div class="contenedor-imagen-moodle" style="text-align: center; margin: 20px auto;">
+         <figure class="contenedor-imagen" style="display: inline-block; max-width: 650px; width: 100%; margin: 0 auto;">
+                <img src="https://github.com/evalicea/bioquimica_uppe/blob/main/imagen_1.png?raw=true" 
+                    alt="primera ley" 
+                    style="max-width: 100%; width: 650px; height: auto; display: block; margin: 0 auto;">
+        
+                <figcaption class="pie-imagen" style="text-align: center; margin-top: 10px; font-size: 14px; color: #444; line-height: 1.4;">
+                    <strong>Figura 2.</strong> Primera ley de la termodinámica.
+                    <span class="fuente-imagen" style="display: block; font-size: 12px; color: #777; margin-top: 4px;">
+                        Fuente: Figure labs <a href="https://chat.figurelabs.ai/" target="_blank" style="color: #006D51; text-decoration: underline;"><i>https://chat.figurelabs.ai/</i></a>
+                    </span>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="contenedor-imagen-moodle" style="text-align: center; margin: 20px auto;">
+         <figure class="contenedor-imagen" style="display: inline-block; max-width: 650px; width: 100%; margin: 0 auto;">
+                <img src="https://github.com/evalicea/bioquimica_uppe/blob/main/imagen_3.png?raw=true" 
+                    alt="primera ley" 
+                    style="max-width: 100%; width: 650px; height: auto; display: block; margin: 0 auto;">
+        
+                <figcaption class="pie-imagen" style="text-align: center; margin-top: 10px; font-size: 14px; color: #444; line-height: 1.4;">
+                    <strong>Figura 3.</strong> Segunda ley de la termodinámica. Visualización del aumento de desorden.
+                    <span class="fuente-imagen" style="display: block; font-size: 12px; color: #777; margin-top: 4px;">
+                        Fuente: Figure labs <a href="https://chat.figurelabs.ai/" target="_blank" style="color: #006D51; text-decoration: underline;"><i>https://chat.figurelabs.ai/</i></a>
+                    </span>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: REDOX -->
+    <section id="redox">
+        <h2>3. Reacciones Redox Biológicas</h2>
+        <p>La mayor parte de la energía necesaria para la biosíntesis procede de la <span class="highlight">oxidación</span> de sustratos orgánicos. Estas reacciones implican la transferencia de electrones de un donador a un aceptor.</p>
+        <ul>
+            <li><strong>Oxidación:</strong> Es la pérdida de electrones o ganancia de oxígeno por una molécula.</li>
+            <li><strong>Reducción:</strong> Es la ganancia de electrones o pérdida de oxígeno.</li>
+            <li><strong>Importancia:</strong> El flujo de electrones en la cadena respiratoria es la fuente principal de energía para la síntesis de ATP en organismos aerobios.</li>
+        </ul>
+    </section>
+  <div class="contenedor-imagen-moodle" style="text-align: center; margin: 20px auto;">
+         <figure class="contenedor-imagen" style="display: inline-block; max-width: 650px; width: 100%; margin: 0 auto;">
+                <img src="https://github.com/evalicea/bioquimica_uppe/blob/main/imagen_4.png?raw=true" 
+                    alt="primera ley" 
+                    style="max-width: 100%; width: 650px; height: auto; display: block; margin: 0 auto;">
+        
+                <figcaption class="pie-imagen" style="text-align: center; margin-top: 10px; font-size: 14px; color: #444; line-height: 1.4;">
+                    <strong>Figura 4.</strong> Principio de Óxido-Reducción (Redox).
+                    <span class="fuente-imagen" style="display: block; font-size: 12px; color: #777; margin-top: 4px;">
+                        Fuente: Figure labs <a href="https://chat.figurelabs.ai/" target="_blank" style="color: #006D51; text-decoration: underline;"><i>https://chat.figurelabs.ai/</i></a>
+                    </span>
+                </figcaption>
+            </figure>
+        </div>
+    
+
+    <!-- SECCIÓN 4: COMPUESTOS DE ALTA ENERGÍA -->
+    <section id="energia">
+        <h2>4. Compuestos de Alta Energía (ATP y GTP)</h2>
+        <p>Los seres vivos utilizan "monedas energéticas" para transferir energía entre procesos que la liberan y procesos que la requieren.</p>
+        <div class="info-box">
+            <h3>Participantes Clave:</h3>
+            <ul>
+                <li><strong>ATP (Trifosfato de Adenosina):</strong> Principal intermediario que vincula procesos endergónicos con exergónicos. Su hidrólisis a ADP libera aproximadamente 7.3 kcal/mol.</li>
+                <li><strong>GTP (Trifosfato de Guanosina):</strong> Compuesto análogo al ATP utilizado específicamente en la síntesis de proteínas y en pasos del Ciclo de Krebs.</li>
+            </ul>
+        </div>
+    </section>
+
+     <div style="max-width: 800px; margin: auto;">
+    <div class="video-responsivo-container">
+        <iframe src="https://www.youtube.com/embed/aQBra7jeVKg?si=qLHd-sknjQZlBWBX" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+    </div>
+    <p class="pie-video">
+        <strong>Video 1.</strong> Síntesis de ATP.
+    </p>
+    </div>   
+
+    <!-- SECCIÓN 5: ENERGÍA LIBRE Y CLASIFICACIÓN -->
+    <section id="gibbs">
+        <h2>5. Energía Libre de Gibbs y Clasificación de Reacciones</h2>
+        <p>La <span class="highlight">Energía Libre (G)</span> es la fracción de energía disponible para realizar un trabajo útil a temperatura y presión constantes.</p>
+        <h3>Clasificación de Reacciones:</h3>
+        <ol>
+            <li><strong>Reacciones Exergónicas:</strong> Liberan energía y ocurren de forma <span class="highlight">espontánea</span> &Delta;G negativo.</li>
+            <li><strong>Reacciones Endergónicas:</strong> Requieren un aporte de energía externa para suceder &Delta;G positivo.</li>
+        </ol>
+        <p>En el metabolismo, las células utilizan el <strong>acoplamiento energético</strong>, donde la energía de una reacción exergónica (como la hidrólisis del ATP) impulsa una reacción endergónica indispensable.</p>
+    </section>
+ <div class="contenedor-imagen-moodle" style="text-align: center; margin: 20px auto;">
+         <figure class="contenedor-imagen" style="display: inline-block; max-width: 650px; width: 100%; margin: 0 auto;">
+                <img src="https://github.com/evalicea/bioquimica_uppe/blob/main/imagen_5.png?raw=true" 
+                    alt="primera ley" 
+                    style="max-width: 100%; width: 650px; height: auto; display: block; margin: 0 auto;">
+        
+                <figcaption class="pie-imagen" style="text-align: center; margin-top: 10px; font-size: 14px; color: #444; line-height: 1.4;">
+                    <strong>Figura 5.</strong> Diagramas de Energía Libre (Exergónico vs. Endergónico).
+                    <span class="fuente-imagen" style="display: block; font-size: 12px; color: #777; margin-top: 4px;">
+                        Fuente: Figure labs <a href="https://chat.figurelabs.ai/" target="_blank" style="color: #006D51; text-decoration: underline;"><i>https://chat.figurelabs.ai/</i></a>
+                    </span>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="contenedor-imagen-moodle" style="text-align: center; margin: 20px auto;">
+         <figure class="contenedor-imagen" style="display: inline-block; max-width: 650px; width: 100%; margin: 0 auto;">
+                <img src="https://github.com/evalicea/bioquimica_uppe/blob/main/imagen_6.png?raw=true" 
+                    alt="primera ley" 
+                    style="max-width: 100%; width: 650px; height: auto; display: block; margin: 0 auto;">
+        
+                <figcaption class="pie-imagen" style="text-align: center; margin-top: 10px; font-size: 14px; color: #444; line-height: 1.4;">
+                    <strong>Figura 6.</strong> Acoplamiento Energético.
+                    <span class="fuente-imagen" style="display: block; font-size: 12px; color: #777; margin-top: 4px;">
+                        Fuente: Figure labs <a href="https://chat.figurelabs.ai/" target="_blank" style="color: #006D51; text-decoration: underline;"><i>https://chat.figurelabs.ai/</i></a>
+                    </span>
+                </figcaption>
+            </figure>
+        </div>
+
+    <!-- SECCIÓN 6: REFERENCIAS -->
+    <section id="referencias" class="reference-section">
+        <h2>6. Referencias Bibliográficas</h2>
+        <p><strong>Mathews, C.K., Van Holde K.E., Appling, D.R., Antony-Cahill S.J.</strong> (2013). <i>Bioquímica</i>. México: Pearson.</p>
+        <p><strong>Kennelly, P.J., Botham, K.M., Rodwell, V.W.</strong> (2022). <i>Harper. Bioquímica Ilustrada</i>. México: McGraw Hill.</p>
+        <p><strong>Martínez Montes, F., Pardo Vázquez, J.P., Riveros Rosas, H. </strong>(2018). <i>Bioquímica de Laguna y Piña</i>. México: El Manual Moderno.</p>
+        <p><strong>Vanbergen, O. y Wintle, G. </strong>(2019). <i>Lo esencial en Metabolismo y Nutrición</i>. España: Elsevier.</p>
+        <p><strong>Nelson, D. L. y Cox, M.</strong> (2019). <i>Lehninger, Principios de Bioquímica</i>. España: Ediciones Omega.</p>
+    </section>
+
+    <footer>
+        <p><strong>Elaborado por:</strong> Dra. Eva Marcela Licea De Anda<br>
+        <strong>Asignatura:</strong> Bioquímica (MA2026)<br>
+        Universidad Politécnica de Pénjamo © 2026</p>
+    </footer>
+</div>
+
+</body>
+</html>
